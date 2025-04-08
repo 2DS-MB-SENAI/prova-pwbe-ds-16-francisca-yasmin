@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Consulta</title>
+</head>
+<body>
+    <h1> Agendar consultas </h1>
+
+    <form action="" method="POST"> 
+        {% csrf_token %}
+        {{consultas.as_p}}
+            
+            <label for="campo1">Medico</label>
+            <input type="text">
+            {{ form.medicos }}
+            <br><br>
+
+            <label for="campo2">Especialidade:</label>
+            <input type="text">
+            {{ form.especialidade }}
+            <br><br>
+
+            <label for="campo1">Paciente:</label>
+            <input type="text">
+            {{ form.medicos }}
+            <br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+    <a href="{% url 'listar_medicos' %}"> Voltar </a>
+
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Medicos</title>
+</head>
+<body>
+
+    <h1> Lista de Medicos </h1>
+    <a href="{% url 'criar_consulta' %}"> Agende uma consulta </a>
+
+    <form method="GET" action="{% url 'listar_medicos' %}">
+        <label for="search">Pesquisar Especialidades:</label>
+        <input type="text" name="search" id="search" value="{{ request.GET.search }}">
+        <button type="submit">Pesquisar</button>
+    </form>
+
+    <ul>
+        {% for i in medicos %}
+            <li>
+                {{i.nome}} - {{i.especialidade}}
+            </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

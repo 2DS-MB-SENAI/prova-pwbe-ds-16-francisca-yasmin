@@ -35,7 +35,7 @@ Implementar uma aplicação Django seguindo o padrão Model-Template-View para g
 - `/consultas/<int:id>/` → Detalhes da consulta
 
 ## 🎨 Templates
-`Os templates devem ser colocados na pasta templates/clinica`
+`Os templates devem ser colocados na pasta templates/clinica` **ok**
 
 ### Arquivos necessários:
 
@@ -50,7 +50,7 @@ Implementar uma aplicação Django seguindo o padrão Model-Template-View para g
 ## ⚠️ Validações
 
 ### Para Médico:
-- CRM deve ter formato XX/XXXXX
+- CRM deve ter formato XX/XXXXX 
 - Nome mínimo de 5 caracteres
 
 ### Para Consulta:
