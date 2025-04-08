@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from .models import Servico, Agendamento
 
-# Create your views here.
+@api_view(['GET'])
+def read_servicos(request):
+    servicos =1

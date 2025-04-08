@@ -7,7 +7,7 @@ class Medico(models.Model):
         ('clino geral', 'clinico geral'),
         ('pediatra', 'pediatra'),
         ('psiquiatria', 'psiquiatria'),
-        ('car', 'car'),
+        ('CAR', 'car'),
     )
     especialidade = models.CharField(max_length=30, choices=especialidade_escolha)
     crm = models.CharField(max_length=8, unique=True,
