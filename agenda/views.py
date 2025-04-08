@@ -14,7 +14,7 @@ def read_servicos(request):
 @api_view(['POST'])
 def create_servicos(request):
      if request.method == 'POST':
-        serializer = ServicoSerializer(data=request.data, many=isinstance(request.data, list)) #converter o JSON para carro
+        serializer = ServicoSerializer(data=request.data, many=True) #converter o JSON para carro
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
