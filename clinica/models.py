@@ -4,16 +4,16 @@ from django.core.validators import RegexValidator
 class Medico(models.Model):
     nome = models.CharField(max_length=100)
     especialidade_escolha = (
-        ('clino geral', 'Clinico geral'),
-        ('pediatra', 'Pediatra'),
-        ('psiquiatria', 'Psiquiatria'),
-        ('car', 'Car')
+        ('clino geral', 'clinico geral'),
+        ('pediatra', 'pediatra'),
+        ('psiquiatria', 'psiquiatria'),
+        ('car', 'car')
     )
     especialidade = models.CharField(max_length=30, choices=especialidade_escolha)
     crm = models.CharField(max_length=8, unique=True,
         validators=[RegexValidator(r'^\d{2}/\d{5}$')],                 
         )
-    emaiil = models.EmailField(max_length=100, blank=True)
+    email = models.EmailField(max_length=100, blank=True)
 
     def __str__(self):
         return self.nome
